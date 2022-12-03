@@ -1,0 +1,414 @@
+,Country_Code,Country_Name,year,tem_change
+7,ATA,Antarctica,1961,0.28
+12,AUS,Australia,1961,0.151
+248,X06,Africa,1961,-0.017
+255,,Northern America,1961,0.017
+258,,South America,1961,0.116
+259,,Asia,1961,0.049
+265,,Europe,1961,0.874
+291,ATA,Antarctica,1962,-0.227
+296,AUS,Australia,1962,0.123
+532,X06,Africa,1962,-0.04
+539,,Northern America,1962,-0.058
+542,,South America,1962,-0.139
+543,,Asia,1962,-0.008
+549,,Europe,1962,0.3
+575,ATA,Antarctica,1963,0.135
+580,AUS,Australia,1963,-0.114
+816,X06,Africa,1963,0.064
+823,,Northern America,1963,0.372
+826,,South America,1963,0.139
+827,,Asia,1963,0.266
+833,,Europe,1963,0.103
+859,ATA,Antarctica,1964,-0.366
+864,AUS,Australia,1964,-0.022
+1100,X06,Africa,1964,-0.153
+1107,,Northern America,1964,-0.285
+1110,,South America,1964,-0.217
+1111,,Asia,1964,-0.166
+1117,,Europe,1964,-0.523
+1143,ATA,Antarctica,1965,-0.099
+1148,AUS,Australia,1965,0.127
+1384,X06,Africa,1965,-0.197
+1391,,Northern America,1965,-0.594
+1394,,South America,1965,-0.015
+1395,,Asia,1965,-0.033
+1401,,Europe,1965,-0.43
+1427,ATA,Antarctica,1966,-0.24
+1432,AUS,Australia,1966,-0.238
+1668,X06,Africa,1966,0.138
+1675,,Northern America,1966,-0.185
+1678,,South America,1966,0.007
+1679,,Asia,1966,0.326
+1685,,Europe,1966,0.724
+1711,ATA,Antarctica,1967,0.133
+1716,AUS,Australia,1967,-0.092
+1952,X06,Africa,1967,-0.209
+1959,,Northern America,1967,-0.195
+1962,,South America,1967,-0.001
+1963,,Asia,1967,-0.308
+1969,,Europe,1967,0.174
+1995,ATA,Antarctica,1968,-0.088
+2000,AUS,Australia,1968,-0.206
+2236,X06,Africa,1968,-0.218
+2243,,Northern America,1968,0.196
+2246,,South America,1968,-0.147
+2247,,Asia,1968,-0.337
+2253,,Europe,1968,0.048
+2279,ATA,Antarctica,1969,-0.256
+2284,AUS,Australia,1969,0.112
+2520,X06,Africa,1969,0.354
+2527,,Northern America,1969,-0.138
+2530,,South America,1969,0.374
+2531,,Asia,1969,-0.017
+2537,,Europe,1969,-1.01
+2563,ATA,Antarctica,1970,-0.133
+2568,AUS,Australia,1970,0.002
+2804,X06,Africa,1970,0.221
+2811,,Northern America,1970,0.194
+2814,,South America,1970,0.184
+2815,,Asia,1970,0.073
+2821,,Europe,1970,0.189
+2847,ATA,Antarctica,1971,0.28
+2852,AUS,Australia,1971,-0.04
+3088,X06,Africa,1971,-0.208
+3095,,Northern America,1971,-0.227
+3098,,South America,1971,-0.277
+3099,,Asia,1971,-0.122
+3105,,Europe,1971,0.264
+3131,ATA,Antarctica,1972,0.621
+3136,AUS,Australia,1972,0.099
+3372,X06,Africa,1972,-0.002
+3379,,Northern America,1972,-1.028
+3382,,South America,1972,0.085
+3383,,Asia,1972,-0.164
+3389,,Europe,1972,-0.148
+3415,ATA,Antarctica,1973,0.011
+3420,AUS,Australia,1973,0.858
+3656,X06,Africa,1973,0.377
+3663,,Northern America,1973,0.128
+3666,,South America,1973,0.251
+3667,,Asia,1973,0.251
+3673,,Europe,1973,0.173
+3699,ATA,Antarctica,1974,0.169
+3704,AUS,Australia,1974,-0.345
+3940,X06,Africa,1974,-0.237
+3947,,Northern America,1974,-0.376
+3950,,South America,1974,-0.209
+3951,,Asia,1974,-0.132
+3957,,Europe,1974,0.02
+3983,ATA,Antarctica,1975,0.177
+3988,AUS,Australia,1975,0.061
+4224,X06,Africa,1975,-0.23
+4231,,Northern America,1975,-0.093
+4234,,South America,1975,-0.149
+4235,,Asia,1975,0.018
+4241,,Europe,1975,0.838
+4267,ATA,Antarctica,1976,-0.634
+4272,AUS,Australia,1976,-0.5
+4508,X06,Africa,1976,-0.26
+4515,,Northern America,1976,-0.021
+4518,,South America,1976,-0.217
+4519,,Asia,1976,-0.328
+4525,,Europe,1976,-0.559
+4551,ATA,Antarctica,1977,0.25
+4556,AUS,Australia,1977,0.19
+4792,X06,Africa,1977,0.232
+4799,,Northern America,1977,0.746
+4802,,South America,1977,0.285
+4803,,Asia,1977,0.101
+4809,,Europe,1977,0.189
+4835,ATA,Antarctica,1978,-0.118
+4840,AUS,Australia,1978,0.078
+5076,X06,Africa,1978,0.077
+5083,,Northern America,1978,-0.29
+5086,,South America,1978,0.148
+5087,,Asia,1978,0.162
+5093,,Europe,1978,-0.166
+5119,ATA,Antarctica,1979,-0.234
+5124,AUS,Australia,1979,0.368
+5360,X06,Africa,1979,0.444
+5367,,Northern America,1979,-0.243
+5370,,South America,1979,0.125
+5371,,Asia,1979,0.448
+5377,,Europe,1979,0.138
+5403,ATA,Antarctica,1980,0.565
+5408,AUS,Australia,1980,0.862
+5644,X06,Africa,1980,0.366
+5651,,Northern America,1980,0.675
+5654,,South America,1980,0.335
+5655,,Asia,1980,0.28
+5661,,Europe,1980,-0.068
+5687,ATA,Antarctica,1981,0.706
+5692,AUS,Australia,1981,0.456
+5928,X06,Africa,1981,0.104
+5935,,Northern America,1981,1.193
+5938,,South America,1981,0.228
+5939,,Asia,1981,0.207
+5945,,Europe,1981,0.662
+5971,ATA,Antarctica,1982,-0.031
+5976,AUS,Australia,1982,0.158
+6212,X06,Africa,1982,0.217
+6219,,Northern America,1982,-0.508
+6222,,South America,1982,0.289
+6223,,Asia,1982,0.109
+6229,,Europe,1982,0.111
+6255,ATA,Antarctica,1983,-0.693
+6260,AUS,Australia,1983,0.605
+6496,X06,Africa,1983,0.408
+6503,,Northern America,1983,0.471
+6506,,South America,1983,0.476
+6507,,Asia,1983,-0.013
+6513,,Europe,1983,0.934
+6539,ATA,Antarctica,1984,0.132
+6544,AUS,Australia,1984,-0.191
+6780,X06,Africa,1984,0.333
+6787,,Northern America,1984,0.038
+6790,,South America,1984,0.144
+6791,,Asia,1984,-0.118
+6797,,Europe,1984,0.271
+6823,ATA,Antarctica,1985,0.18
+6828,AUS,Australia,1985,0.296
+7064,X06,Africa,1985,0.301
+7071,,Northern America,1985,-0.144
+7074,,South America,1985,0.14
+7075,,Asia,1985,0.016
+7081,,Europe,1985,-0.605
+7107,ATA,Antarctica,1986,-0.269
+7112,AUS,Australia,1986,0.329
+7348,X06,Africa,1986,0.283
+7355,,Northern America,1986,0.302
+7358,,South America,1986,0.296
+7359,,Asia,1986,0.056
+7365,,Europe,1986,0.259
+7391,ATA,Antarctica,1987,-0.698
+7396,AUS,Australia,1987,0.304
+7632,X06,Africa,1987,0.671
+7639,,Northern America,1987,1.11
+7642,,South America,1987,0.649
+7643,,Asia,1987,0.406
+7649,,Europe,1987,-0.562
+7675,ATA,Antarctica,1988,0.956
+7680,AUS,Australia,1988,0.906
+7916,X06,Africa,1988,0.608
+7923,,Northern America,1988,0.839
+7926,,South America,1988,0.3
+7927,,Asia,1988,0.423
+7933,,Europe,1988,0.494
+7959,ATA,Antarctica,1989,-0.436
+7964,AUS,Australia,1989,0.109
+8200,X06,Africa,1989,-0.019
+8207,,Northern America,1989,0.147
+8210,,South America,1989,0.203
+8211,,Asia,1989,0.259
+8217,,Europe,1989,1.035
+8243,ATA,Antarctica,1990,0.289
+8248,AUS,Australia,1990,0.495
+8484,X06,Africa,1990,0.574
+8491,,Northern America,1990,0.363
+8494,,South America,1990,0.389
+8495,,Asia,1990,0.527
+8501,,Europe,1990,1.257
+8527,ATA,Antarctica,1991,0.678
+8532,AUS,Australia,1991,0.778
+8768,X06,Africa,1991,0.386
+8775,,Northern America,1991,0.419
+8778,,South America,1991,0.408
+8779,,Asia,1991,0.39
+8785,,Europe,1991,0.597
+8811,ATA,Antarctica,1992,0.334
+8816,AUS,Australia,1992,0.215
+9052,X06,Africa,1992,0.112
+9059,,Northern America,1992,0.226
+9062,,South America,1992,0.299
+9063,,Asia,1992,-0.059
+9069,,Europe,1992,0.472
+9095,ATA,Antarctica,1993,-0.734
+9100,AUS,Australia,1993,0.415
+9336,X06,Africa,1993,0.407
+9343,,Northern America,1993,0.154
+9346,,South America,1993,0.396
+9347,,Asia,1993,0.073
+9353,,Europe,1993,0.75
+9379,ATA,Antarctica,1994,-0.234
+9384,AUS,Australia,1994,0.166
+9620,X06,Africa,1994,0.418
+9627,,Northern America,1994,0.451
+9630,,South America,1994,0.536
+9631,,Asia,1994,0.522
+9637,,Europe,1994,0.698
+9663,ATA,Antarctica,1995,-0.285
+9668,AUS,Australia,1995,0.347
+9904,X06,Africa,1995,0.58
+9911,,Northern America,1995,0.766
+9914,,South America,1995,0.642
+9915,,Asia,1995,0.616
+9921,,Europe,1995,1.83
+9947,ATA,Antarctica,1996,0.778
+9952,AUS,Australia,1996,0.522
+10188,X06,Africa,1996,0.551
+10195,,Northern America,1996,-0.055
+10198,,South America,1996,0.418
+10199,,Asia,1996,0.173
+10205,,Europe,1996,0.57
+10231,ATA,Antarctica,1997,-0.556
+10236,AUS,Australia,1997,0.317
+10472,X06,Africa,1997,0.588
+10479,,Northern America,1997,0.403
+10482,,South America,1997,0.744
+10483,,Asia,1997,0.614
+10489,,Europe,1997,1.096
+10515,ATA,Antarctica,1998,-0.484
+10520,AUS,Australia,1998,1.022
+10756,X06,Africa,1998,0.961
+10763,,Northern America,1998,1.864
+10766,,South America,1998,1.017
+10767,,Asia,1998,1.047
+10773,,Europe,1998,0.187
+10799,ATA,Antarctica,1999,-0.594
+10804,AUS,Australia,1999,0.542
+11040,X06,Africa,1999,0.666
+11047,,Northern America,1999,1.219
+11050,,South America,1999,0.387
+11051,,Asia,1999,1.091
+11057,,Europe,1999,0.588
+11083,ATA,Antarctica,2000,-0.778
+11088,AUS,Australia,2000,0.122
+11324,X06,Africa,2000,0.496
+11331,,Northern America,2000,1.141
+11334,,South America,2000,0.312
+11335,,Asia,2000,0.68
+11341,,Europe,2000,1.342
+11367,ATA,Antarctica,2001,-0.062
+11372,AUS,Australia,2001,0.32
+11608,X06,Africa,2001,0.677
+11615,,Northern America,2001,1.102
+11618,,South America,2001,0.623
+11619,,Asia,2001,1.019
+11625,,Europe,2001,0.953
+11651,ATA,Antarctica,2002,1.259
+11656,AUS,Australia,2002,0.706
+11892,X06,Africa,2002,0.894
+11899,,Northern America,2002,0.757
+11902,,South America,2002,0.837
+11903,,Asia,2002,1.16
+11909,,Europe,2002,1.505
+11935,ATA,Antarctica,2003,-0.474
+11940,AUS,Australia,2003,0.79
+12176,X06,Africa,2003,0.999
+12183,,Northern America,2003,1.147
+12186,,South America,2003,0.856
+12187,,Asia,2003,0.644
+12193,,Europe,2003,0.972
+12219,ATA,Antarctica,2004,0.129
+12224,AUS,Australia,2004,0.671
+12460,X06,Africa,2004,0.825
+12467,,Northern America,2004,0.696
+12470,,South America,2004,0.738
+12471,,Asia,2004,1.088
+12477,,Europe,2004,1.282
+12503,ATA,Antarctica,2005,0.875
+12508,AUS,Australia,2005,1.144
+12744,X06,Africa,2005,1.1
+12751,,Northern America,2005,1.235
+12754,,South America,2005,0.883
+12755,,Asia,2005,0.862
+12761,,Europe,2005,1.537
+12787,ATA,Antarctica,2006,-0.081
+12792,AUS,Australia,2006,0.643
+13028,X06,Africa,2006,0.94
+13035,,Northern America,2006,1.692
+13038,,South America,2006,0.786
+13039,,Asia,2006,1.101
+13045,,Europe,2006,0.678
+13071,ATA,Antarctica,2007,0.68
+13076,AUS,Australia,2007,0.864
+13312,X06,Africa,2007,0.818
+13319,,Northern America,2007,1.237
+13322,,South America,2007,0.666
+13323,,Asia,2007,1.182
+13329,,Europe,2007,2.31
+13355,ATA,Antarctica,2008,0.605
+13360,AUS,Australia,2008,0.553
+13596,X06,Africa,2008,0.754
+13603,,Northern America,2008,0.537
+13606,,South America,2008,0.666
+13607,,Asia,2008,0.873
+13613,,Europe,2008,2.024
+13639,ATA,Antarctica,2009,1.314
+13644,AUS,Australia,2009,0.968
+13880,X06,Africa,2009,1.011
+13887,,Northern America,2009,0.473
+13890,,South America,2009,0.933
+13891,,Asia,2009,1.075
+13897,,Europe,2009,1.239
+13923,ATA,Antarctica,2010,0.813
+13928,AUS,Australia,2010,0.644
+14164,X06,Africa,2010,1.541
+14171,,Northern America,2010,1.826
+14174,,South America,2010,0.906
+14175,,Asia,2010,1.251
+14181,,Europe,2010,0.817
+14207,ATA,Antarctica,2011,0.725
+14212,AUS,Australia,2011,0.176
+14448,X06,Africa,2011,0.949
+14455,,Northern America,2011,1.002
+14458,,South America,2011,0.721
+14459,,Asia,2011,0.701
+14465,,Europe,2011,1.548
+14491,ATA,Antarctica,2012,-0.216
+14496,AUS,Australia,2012,0.273
+14732,X06,Africa,2012,0.781
+14739,,Northern America,2012,1.786
+14742,,South America,2012,0.943
+14743,,Asia,2012,0.693
+14749,,Europe,2012,1.789
+14775,ATA,Antarctica,2013,1.738
+14780,AUS,Australia,2013,1.45
+15016,X06,Africa,2013,1.014
+15023,,Northern America,2013,0.902
+15026,,South America,2013,0.834
+15027,,Asia,2013,1.054
+15033,,Europe,2013,1.118
+15059,ATA,Antarctica,2014,0.546
+15064,AUS,Australia,2014,1.139
+15300,X06,Africa,2014,1.036
+15307,,Northern America,2014,0.389
+15310,,South America,2014,1.105
+15311,,Asia,2014,0.909
+15317,,Europe,2014,1.807
+15343,ATA,Antarctica,2015,-0.095
+15348,AUS,Australia,2015,1.051
+15584,X06,Africa,2015,1.208
+15591,,Northern America,2015,1.33
+15594,,South America,2015,1.435
+15595,,Asia,2015,1.284
+15601,,Europe,2015,2.106
+15627,ATA,Antarctica,2016,0.217
+15632,AUS,Australia,2016,1.142
+15868,X06,Africa,2016,1.442
+15875,,Northern America,2016,2.273
+15878,,South America,2016,1.242
+15879,,Asia,2016,1.457
+15885,,Europe,2016,2.286
+15911,ATA,Antarctica,2017,0.764
+15916,AUS,Australia,2017,1.117
+16152,X06,Africa,2017,1.224
+16159,,Northern America,2017,1.426
+16162,,South America,2017,1.232
+16163,,Asia,2017,1.464
+16169,,Europe,2017,1.959
+16195,ATA,Antarctica,2018,1.454
+16200,AUS,Australia,2018,1.112
+16436,X06,Africa,2018,1.222
+16443,,Northern America,2018,0.873
+16446,,South America,2018,1.034
+16447,,Asia,2018,1.343
+16453,,Europe,2018,2.009
+16479,ATA,Antarctica,2019,0.615
+16484,AUS,Australia,2019,1.423
+16720,X06,Africa,2019,1.415
+16727,,Northern America,2019,1.179
+16730,,South America,2019,1.31
+16731,,Asia,2019,1.369
+16737,,Europe,2019,2.116
