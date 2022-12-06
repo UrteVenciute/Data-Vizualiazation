@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<body>
+    <!-- Content will go here -->
+    <nav class="w3-bar w3-black">
+      <a href="index.html" class="w3-button w3-bar-item">Main</a>
+      <a href="index.html" class="w3-button w3-bar-item">Facts</a>
+      <a href="index.html" class="w3-button w3-bar-item">Explore</a>
+      <a href="index.html" class="w3-button w3-bar-item">More</a>
+
+      <section class="w3-container w3-content w3-center" style="max-width:600px">
+        <p class="w3-justify">
+          In the 1970s we can see that temperatures in five countries have risen significantly more than in other parts of the world.  </p>
+        </section>
+
+    <form>
+        <select name="year" onchange="location = this.value;" style="position:absolute;top:320px;left:450px;"> 
+            <option value="Decade_2010.html"> 2010</option>
+            <option value="Decade_2000.html">2000</option>
+            <option value="Decade_1990.html">1990</option>
+            <option value="Decade_1980.html">1980</option>
+            <option value="Decade_1970.html" selected>1970</option>
+        </select>
+    </form>
+    <div id="vis"></div>
+  
+</body>
+
+<script>
+    // set the dimensions and margins of the graph
+    var margin = {top: 50, right: 0, bottom: 100, left: 90},
+        width = 460 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    // Parse the Data
+    d3.csv("https://raw.githubusercontent.com/UrteVenciute/Data-Vizualiazation/main/Decade_1970.csv", function(data) {
+    
+    // X axis
+    var x = d3.scaleBand()
+      .range([ 0, width ])
+      .domain(data.map(function(d) { return d.Country_Name; }))
+      .padding(0.2);
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x))
+      .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("font-size", "8px") 
+        .style("text-anchor", "end");
+    
+    // Add Y axis
+    var y = d3.scaleLinear()
+      .domain([0.5, 1])
+      .range([ height, 0]);
+    svg.append("g")
+      .call(d3.axisLeft(y));
+
+    svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 40 - margin.left)
+      .attr("x", 2 - (height / 2))
+      .attr("dy", "1em")
+      .style("font-size", "16px") 
+      .style("text-anchor", "middle")
+      .text("Temperature change");
+    
+    
+    svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0 - (margin.top / 2))
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .style("text-decoration", "line")  
+        .text("Countries most affected by Climate Change");
+    // Bars
+    svg.selectAll("mybar")
+      .data(data)
+      .enter()
+      .append("rect")
+        .attr("x", function(d) { return x(d.Country_Name); })
+        .attr("y", function(d) { return y(d.tem_change); })
+        .attr("width", x.bandwidth())
+        .attr("height", function(d) { return height - y(d.tem_change); })
+        .attr("fill", "#69b3a2")
+    
+        
+     svg.selectAll("text.bar")
+        .data(data)
+        .enter().append("text")
+           .attr("class", "bar")
+           .attr("text-anchor", "middle")
+           .style("font-size", "8px")
+           .attr("x", function(d) { return x(d.Country_Name)+ 14; })
+           .attr("y", function(d) { return y(d.tem_change) - 4; })
+           .text(function(d) { return d.tem_change; });
+    })
+    </script>
+</html>

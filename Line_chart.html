@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<div>
+  <svg id="my_dataviz" height=500 width=10000 background-color: #EBEBEB;></svg>
+</div>
+
+<body>
+
+  <!-- Content will go here -->
+  <nav class="w3-bar w3-black">
+      <a href="index.html" class="w3-button w3-bar-item">Main</a>
+      <a href="index.html" class="w3-button w3-bar-item">Facts</a>
+      <a href="index.html" class="w3-button w3-bar-item">Explore</a>
+      <a href="index.html" class="w3-button w3-bar-item">More</a>
+
+      <section class="w3-container w3-content w3-center" style="max-width:600px">
+        <p class="w3-justify">
+          Increase temperatures by continents 1961 to 2019. Weather stations provide informative data from large parts of the world and show a general increase in air temperatures. It can be seen quite clearly that there has been a sharp increase in temperatures worldwide since the 1960s. All continents has a more fluctuated line and also, they have a lots of peak points.  </p>
+        </section>
+
+<script>
+    // set the dimensions and margins of the graph
+    var margin = {top: 40, right: 5, bottom: 30, left: 100},
+        width = 1000 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    //Read the data
+    d3.csv("https://raw.githubusercontent.com/UrteVenciute/Data-Vizualiazation/main/Continente_temp.csv", function(data) {
+    
+      // group the data: I want to draw one line per group
+      var sumstat = d3.nest() // nest function allows to group the calculation per level of a factor
+        .key(function(d) { return d.Country_Name;})
+        .entries(data);
+    
+      svg.append("text")
+         .attr("transform", "translate(100,0)")
+         .attr("x", 200)
+         .attr("y", -4)
+         .attr("font-size", "24px")
+         .text("Global warming by continents")
+
+      // Add X axis --> it is a date format
+      var x = d3.scaleLinear()
+        .domain(d3.extent(data, function(d) { return d.year; }))
+        .range([ 0, width ]);
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .style("font-size", "8px") 
+        .call(d3.axisBottom(x).ticks(5));
+
+      svg.append("text")      // text label for the x axis
+        .attr("x", 880 )
+        .attr("y",  460)
+        .style("text-anchor", "middle")
+        .text("Year");
+
+      // Add Y axis
+     var y = d3.scaleLinear()
+        .domain([-1.2, d3.max(data, function(d) { return +d.tem_change; })])
+        .range([ height, 0 ]);
+     svg.append("g")
+        .call(d3.axisLeft(y));
+    
+     svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 50 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Temperature change");
+    
+     var bisect = d3.bisector(function(d) { return d.year; }).left;
+
+     // Create the circle that travels along the curve of chart
+      var focus = svg
+         .append('g')
+         .append('circle')
+           .style("fill", "fill")
+           .attr("stroke", "black")
+           .attr('r', 3.5)
+           .style("opacity", 20)
+
+           // Create the text that travels along the curve of chart
+       var focusText = svg
+           .append('g')
+           .append('text')
+             .style("opacity", 10)
+             .attr("text-anchor", "left")
+             .attr("alignment-baseline", "middle")
+    
+           // Create a rect on top of the svg area: this rectangle recovers mouse position
+       svg
+          .append('rect')
+          .style("fill", "none")
+          .style("pointer-events", "all")
+          .attr('width', width)
+          .attr('height', height)
+          .on('mouseover', mouseover)
+          .on('mousemove', mousemove)
+          .on('mouseout', mouseout);
+
+  // What happens when the mouse move -> show the annotations at the right positions.
+  function mouseover() {
+    focus.style("opacity", 1)
+    focusText.style("opacity",1)
+  }
+
+  function mousemove() {
+    // recover coordinate we need
+    var x0 = x.invert(d3.mouse(this)[0]);
+    var i = bisect(data, x0, 1);
+    selectedData = data[i]
+    focus
+      .attr("cx", x(selectedData.year))
+      .attr("cy", y(selectedData.tem_change))
+    focusText
+      .html("x:" + selectedData.year + "  -  " + "y:" + selectedData.tem_change)
+      .attr("x", x(selectedData.year)+15)
+      .attr("y", y(selectedData.tem_change))
+    }
+  function mouseout() {
+    focus.style("opacity", 0)
+    focusText.style("opacity", 0)
+  }
+
+      var res = sumstat.map(function(d){ return d.key }) // list of group names
+      var color = d3.scaleOrdinal()
+        .domain(res)
+        .range(['#5cd6d6','#ff1a1a','#ffa31a','#009933','#cc0066','#ffcc00','#003cb3'])
+    
+      // Draw the line
+      svg.selectAll(".line")
+          .data(sumstat)
+          .enter()
+          .append("path")
+            .attr("fill", "none")
+            .attr("stroke", function(d){ return color(d.key) })
+            .attr("stroke-width", 1.5)
+            .attr("d", function(d){
+              return d3.line()
+                .x(function(d) { return x(d.year); })
+                .y(function(d) { return y(+d.tem_change); })
+                (d.values)
+            })
+
+
+       svg.append("circle").attr("cx",700).attr("cy",360).attr("r", 4).style("fill", "#ffcc00")
+       svg.append("circle").attr("cx",700).attr("cy",380).attr("r", 4).style("fill", "#009933")
+       svg.append("text").attr("x", 710).attr("y", 360).text("Asia").style("font-size", "13px").attr("alignment-baseline","middle")
+       svg.append("text").attr("x", 710).attr("y", 380).text("North America").style("font-size", "13px").attr("alignment-baseline","middle")
+       svg.append("circle").attr("cx",700).attr("cy",400).attr("r", 4).style("fill", "#cc0066")
+       svg.append("circle").attr("cx",700).attr("cy",420).attr("r", 4).style("fill", "#5cd6d6")
+       svg.append("text").attr("x", 710).attr("y", 400).text("South America").style("font-size", "13px").attr("alignment-baseline","middle")
+       svg.append("text").attr("x", 710).attr("y", 420).text("Antarctica").style("font-size", "13px").attr("alignment-baseline","middle")
+       svg.append("circle").attr("cx",820).attr("cy",360).attr("r", 4).style("fill", "#003cb3")
+       svg.append("circle").attr("cx",820).attr("cy", 380).attr("r", 4).style("fill", "#ff1a1a")
+       svg.append("text").attr("x", 830).attr("y", 360).text("Europe").style("font-size", "13px").attr("alignment-baseline","middle")
+       svg.append("text").attr("x", 830).attr("y", 380).text("Australia").style("font-size", "13px").attr("alignment-baseline","middle")
+       svg.append("circle").attr("cx",820).attr("cy",400).attr("r", 4).style("fill", "#ffa31a")
+       svg.append("text").attr("x", 830).attr("y", 400).text("Africa").style("font-size", "13px").attr("alignment-baseline","middle")
+    })
+    
+</script>
+</body>
+</html>
